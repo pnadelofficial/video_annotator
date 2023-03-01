@@ -17,7 +17,9 @@
             <div class="col-sm-8 text-center">
                 <label for="input">Choose a video file to annotate:</label>
                 <input type="file" id="input" name="input_video" accept="video/*">
-                <video id="video" controls style="display: none;"></video>
+                <video id="video" controls style="display: none;">
+                    <source src="stars-6962.mp4" type="video/mp4">
+                </video>
             </div>
             <div class="col-sm-4">
                 <button class ="pause"> Annotate </button>
@@ -67,7 +69,7 @@
         p_tags = $('p');
         p_tags.each(function(index){
             if ($( this ).text().startsWith("Timestamp:")){
-                var line = $( this ).text();
+                var line = `timestamp, note\n${$( this ).text()}`;
                 line += ","
                 p_tags.slice(index+1).each(function(index2){
                     if (!$(this).text().startsWith("Timestamp:")){
