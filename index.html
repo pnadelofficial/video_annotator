@@ -12,13 +12,15 @@
 </head>
 <body>
     <h1>Video Annotator</h1>
+    <br>
     <div class="container">
         <div class="row">
             <div class="col-sm-8 text-center">
                 <label for="input">Choose a video file to annotate:</label>
                 <input type="file" id="input" name="input_video" accept="video/*">
                 <video id="video" controls style="display: none;" width="650px" height="375px">
-                    <source src="stars-6962.mp4" type="video/mp4">
+                    <source src="diving-908.mp4" id="video_here">
+                    Your browser does not support HTML5 video.
                 </video>
             </div>
             <div class="col-sm-4">
@@ -28,12 +30,69 @@
                 <button onclick="display()">Add note</button>
                 <button onclick="save()">Save</button>
             </div>
-            <br>
-            <div class="col-sm-4" id="notes">
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-sm-8" id="notes">
                 <div id ='notes'>
                     <h3>Notes:</h3>
                 </div>
-                
+            </div>
+            <div class="col-sm-4" id="tut">
+                <h3>How to use this tool:</h3>
+                <div class="accordion accordion-flush" id="accordionFlushExample">
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="flush-headingOne">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                          Upload a video
+                        </button>
+                      </h2>
+                      <div id="flush-collapseOne" class="accordion-collapse show" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">You can upload a file with the 'Choose File' button. It will start playing immediately. Try downloading and uploading <a href="https://pixabay.com/videos/diving-seal-underwater-animals-908/">this video</a> to get started.</div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="flush-headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                          Pause your video to take notes
+                        </button>
+                      </h2>
+                      <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">If you want to pause it to take notes, you can hit the Annotate button. This will display the timestamp of when you paused it below the video.</div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="flush-headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                          Annotate your video
+                        </button>
+                      </h2>
+                      <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">You can then type your notes in the text box. Clicking 'Add note' will add the note to the list of Notes under the last pause timestamp.</div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingThree">
+                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+                            Continue watching
+                          </button>
+                        </h2>
+                        <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
+                          <div class="accordion-body">To continue watching, just click 'Continue playing'. Feel free to use the 'Annotate' and `Continue playing` buttons to keep pausing, taking notes and resuming the video.</div>
+                        </div>
+                      </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingThree">
+                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+                            Saving your notes
+                          </button>
+                        </h2>
+                        <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushExample">
+                          <div class="accordion-body">When you're done, with the 'Save' button, you can download the notes as a .csv file, which can be opened by any spreadsheet software.</div>
+                        </div>
+                      </div>
+                  </div>
+              </div>
             </div>
         </div>
     </div>

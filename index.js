@@ -1,5 +1,13 @@
+// preview video
+$(document).on("change", ".input_video", function(evt) {
+    var $source = $('#video_here');
+    $source[0].src = URL.createObjectURL(this.files[0]);
+    $source.parent()[0].load();
+  });
+
 // get uploaded video
 document.getElementById("input").addEventListener("change", function() {
+    //URL.revokeObjectURL($('#video_here')[0].src)
     var media = URL.createObjectURL(this.files[0]);
     var video = document.getElementById("video");
     video.src = media;
